@@ -11,7 +11,7 @@ public class UnitTest1
         {
             var intelligence = new IntelligenceClientBuilder()
                 .WithOpenAIModel("gpt-3.5-turbo")
-                .WithOpenAIApiKey("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")
+                .WithOpenAIApiKey("sk...23")
                 .Build();
 
             Assert.NotNull(intelligence);
