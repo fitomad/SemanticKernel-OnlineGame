@@ -10,6 +10,24 @@ Es un proyecto web con el cliente desarrollado con React y la librería Mantine 
 - **Intelligence**. Aquí se encuntra toda la parte relacionada con el framework Semantic Kernel.
 - **Server**. Es el servidor ASP.NET 
 
+## User secrets
+
+La aplicación necesita un API Key válido de OpenAI para poder ejecutarse. Una vez obtenido se almacena usando los *user secrets* de .NET.
+
+Para ello abra un Teminal y sitúese en la carpeta **Server** y ejecute estos dos comandos.
+
+Iniciar los user secrets
+
+```bash
+dotnet user-secrets init
+```
+
+Almacenar la clave de acceso al API de OpenAI
+
+```bash
+dotnet user-secrets set "OpenAI:ApiKey" "sk...23"
+```
+
 ## Arrancando la aplicación
 
 Para arrancanr el servidor siga estas instrucciones
