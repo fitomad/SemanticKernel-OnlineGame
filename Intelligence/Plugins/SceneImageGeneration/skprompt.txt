@@ -1,0 +1,4 @@
+Genera una imagen usando la siguiente descripción.
+[BEGIN TEXT]
+{{$imageDescription}}
+[END TEXT]

@@ -1,0 +1,4 @@
+Crea una descripción para un juego de rol en línea de {{$gameGenre}} llamado {{$gameName}}.
+
+- El texto de la descripción no debe tener más de 300 palabras.
+- Usar formato HTML para generar un texto más atractivo para el usuario.

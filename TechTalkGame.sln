@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intelligence", "Intelligence\Intelligence.csproj", "{C5089B72-2371-4F45-BADD-F23667CA5A47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intelligence.Tests", "Intelligence.Tests\Intelligence.Tests.csproj", "{429CE2CD-8E94-4BD1-907E-4AB49637AC17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalkServer.API", "Server\TechTalkServer.API.csproj", "{81AC325F-026D-41E3-85A0-651DE51D718F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5089B72-2371-4F45-BADD-F23667CA5A47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5089B72-2371-4F45-BADD-F23667CA5A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5089B72-2371-4F45-BADD-F23667CA5A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5089B72-2371-4F45-BADD-F23667CA5A47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{429CE2CD-8E94-4BD1-907E-4AB49637AC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{429CE2CD-8E94-4BD1-907E-4AB49637AC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{429CE2CD-8E94-4BD1-907E-4AB49637AC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{429CE2CD-8E94-4BD1-907E-4AB49637AC17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81AC325F-026D-41E3-85A0-651DE51D718F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AC325F-026D-41E3-85A0-651DE51D718F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AC325F-026D-41E3-85A0-651DE51D718F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AC325F-026D-41E3-85A0-651DE51D718F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

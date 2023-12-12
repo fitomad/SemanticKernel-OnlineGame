@@ -1,0 +1,5 @@
+Genera una imagen con estilo realista usando la siguiente descripción
+
+---
+{{$imageDescription}}
+---

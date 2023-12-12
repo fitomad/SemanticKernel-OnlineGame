@@ -1,0 +1,26 @@
+{
+    "schema": 1,
+    "type": "completion",
+    "description": "Gets the intent of the user.",
+    "completion": {
+         "max_tokens": 500,
+         "temperature": 1.8,
+         "top_p": 0.0,
+         "presence_penalty": 0.0,
+         "frequency_penalty": 0.0
+    },
+    "input": {
+         "parameters": [
+              {
+                   "name": "history",
+                   "description": "The system and user conversation before this user's prompt. Use it to obtain the context.",
+                   "defaultValue": ""
+              },
+              {
+               "name": "userPrompt",
+               "description": "The user's instructions in the current online game session.",
+               "defaultValue": ""
+          }
+         ]
+    }
+}

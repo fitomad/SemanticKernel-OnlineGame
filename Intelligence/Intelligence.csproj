@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.0.0-rc3" />
+    <PackageReference Include="Microsoft.SemanticKernel.Connectors.AI.OpenAI" Version="1.0.0-rc3" />
+    <PackageReference Include="Microsoft.SemanticKernel.Core" Version="1.0.0-rc3" />
+  </ItemGroup>
+
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+  <Copy SourceFiles="Plugins/GameDescription/skprompt.txt" DestinationFolder="$(OutDir)/Plugins/GameDescription" />
+  <Copy SourceFiles="Plugins/GameDescription/config.json" DestinationFolder="$(OutDir)/Plugins/GameDescription" />
+  <Copy SourceFiles="Plugins/GameTurn/skprompt.txt" DestinationFolder="$(OutDir)/Plugins/GameTurn" />
+  <Copy SourceFiles="Plugins/GameTurn/config.json" DestinationFolder="$(OutDir)/Plugins/GameTurn" />
+  <Copy SourceFiles="Plugins/SceneImageGeneration/skprompt.txt" DestinationFolder="$(OutDir)/Plugins/SceneImageGeneration" />
+  <Copy SourceFiles="Plugins/SceneImageGeneration/config.json" DestinationFolder="$(OutDir)/Plugins/SceneImageGeneration" />
+  </Target>
+</Project>

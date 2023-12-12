@@ -1,0 +1,19 @@
+@TechTalkServer.API_HostAddress = http://localhost:5065
+
+GET {{TechTalkServer.API_HostAddress}}/games
+Accept: application/json
+
+###
+
+GET {{TechTalkServer.API_HostAddress}}/games/el-bosque
+Accept: application/json
+
+###
+
+POST {{TechTalkServer.API_HostAddress}}/games/el-bosque
+Content-Type: application/json
+
+###
+
+GET {{TechTalkServer.API_HostAddress}}/games/el-bosque/image
+Content-Type: application/json
