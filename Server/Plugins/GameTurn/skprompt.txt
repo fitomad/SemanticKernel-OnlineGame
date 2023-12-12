@@ -1,4 +1,9 @@
 [History]
 {{$history}}
 
-Usuario: {{$userPrompt}}
+El texto anterior sirve de contexto para la respuesta que tienes que dar al usuario.
+Sólo tienes que generar texto respondiendo al prompt del usuario.
+
+--- BEGIN TEXT
+{{$userPrompt}}
+--- END TEXT
