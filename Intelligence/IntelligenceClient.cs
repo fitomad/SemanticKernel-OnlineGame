@@ -2,10 +2,8 @@
 using Microsoft.SemanticKernel.AI.TextToImage;
 using Microsoft.Extensions.Logging;
 
-
 using Intelligence.Plugins;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection.Metadata.Ecma335;
 
 namespace Intelligence;
 
