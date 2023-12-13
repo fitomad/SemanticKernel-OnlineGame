@@ -21,7 +21,7 @@ var apiKey = builder.Configuration["OpenAI:ApiKey"];
 
 IntelligenceClient intelligence = new IntelligenceClientBuilder()
     .WithOpenAIApiKey(apiKey!)
-    .WithOpenAIModel("gpt-3.5-turbo")
+    .WithOpenAIModel("gpt-4")
     .Build();
 
 builder.Services.AddSingleton<IIntelligenceClient>(intelligence);
@@ -47,39 +47,4 @@ if (app.Environment.IsDevelopment())
 app.MapControllers();
 app.UseHttpsRedirection();
 
-
-
-/*
-RouteGroupBuilder gameRoute = app.MapGroup("/game");
-
-gameRoute.MapGet("/", () =>
-{
-    var games =  Enumerable.Range(1, 5).Select(index =>
-        new Game {
-            Name = "El Bosque",
-            Description = "Una descripción",
-            GameID = "el-bosque"
-        }
-    )
-    .ToArray();
-    
-    return TypedResults.Ok(games);
-})
-.WithName("GetGames")
-.WithOpenApi();
-
-gameRoute.MapGet("/{gameName}", (string gameName) => 
-{
-    return Results.Ok($"Description ({gameName})");
-})
-.WithName("GetGameDescription")
-.WithOpenApi();
-
-gameRoute.MapPost("/{gameName}", (string gameName) =>
-{
-    return Results.Ok($"Contestación de ChatGPT ({gameName})");
-})
-.WithName("GetGameResponse")
-.WithOpenApi();
-*/
 app.Run();

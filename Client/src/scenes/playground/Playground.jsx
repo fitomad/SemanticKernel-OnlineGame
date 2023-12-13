@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Stack, Title, Grid, TextInput, Text, Textarea, Kbd, Image, rem, ScrollArea } from '@mantine/core';
+import { Stack, Title, Grid, TextInput, Text, Textarea, Kbd, Image, rem, ScrollArea, Divider } from '@mantine/core';
 import { IconTerminal } from '@tabler/icons-react';
 import { json, useParams } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ function Playground() {
     const { game } = useParams();
     const [gameInfo, setGame] = useState();
     const [messages, setMessages] = useState();
-    const [imageURL, setImageURL] = useState();
+    const [images, setImages] = useState();
 
     useEffect(() => {
         const gameFetch = async () => {
@@ -26,6 +26,8 @@ function Playground() {
             const initialMessages = [ serverMessage ];
             setMessages(initialMessages);
 
+            setImages([ `https://placehold.co/600x400?text=${game}` ]);
+
             setGame(gameInfo);
         };
 
@@ -41,6 +43,19 @@ function Playground() {
             return <PlayerMessage key={message.id} message={message.text} />;
         }
     });
+
+    const imageWidgets = images?.map((image) => (
+       <Stack>
+            <Image
+                radius="md"
+                src={ image }
+                h={500}
+                w={400}
+            />
+
+            <Divider my="md" label="* * *" labelPosition="center" />
+        </Stack>
+    ));
 
     return(
         <Stack pt={24} pb={24} pl={48} pr={48}>
@@ -86,7 +101,9 @@ function Playground() {
                                         };
                             
                                         setMessages(prevMessages => ([ ...prevMessages, serverMessage ]));
-                                        setImageURL(gameInfo.asset.url);
+                                        setImages(prevImages => ([ ...prevImages, gameInfo.asset.url ]));
+                                        console.log(gameInfo.asset.url);
+                                        console.log(gameInfo);
                                     };
                             
                                     userFetch();
@@ -98,13 +115,9 @@ function Playground() {
                     </ScrollArea>
                 </Grid.Col>
                 <Grid.Col span={4}>
-                <Image
-                    radius="md"
-                    src={null}
-                    h={500}
-                    w={400}
-                    fallbackSrc={imageURL ? imageURL : 'https://placehold.co/600x600?text=Placeholder' }
-                />
+                    <Stack>
+                    { imageWidgets }
+                    </Stack>
                 </Grid.Col>
             </Grid>
         </Stack>
